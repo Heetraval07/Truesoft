@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import FeatureCard from "@/components/FeatureCard";
 import ContentSection from "@/components/ContentSection";
 import CTASection from "@/components/CTASection";
+import ScrollReveal from "@/components/ScrollReveal";
 import heroHome from "@/assets/hero-home.png";
 import featureBilling from "@/assets/feature-billing.png";
 import featureIntegration from "@/assets/feature-integration.png";
@@ -35,6 +36,7 @@ const Index = () => {
       >
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <FeatureCard
+            index={0}
             icon={<Zap size={24} />}
             title="Efficient ERP Solutions"
             description="Streamline your business operations with our comprehensive ERP implementations tailored to your industry."
@@ -45,6 +47,7 @@ const Index = () => {
             ]}
           />
           <FeatureCard
+            index={1}
             icon={<Users size={24} />}
             title="CRM Excellence"
             description="Build stronger customer relationships with intelligent CRM solutions designed for growth."
@@ -55,6 +58,7 @@ const Index = () => {
             ]}
           />
           <FeatureCard
+            index={2}
             icon={<Globe size={24} />}
             title="Digital Transformation"
             description="Transform your digital presence with modern web applications and marketing strategies."
@@ -103,18 +107,18 @@ const Index = () => {
         <div className="absolute inset-0 bg-hero/70 flex items-center">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="flex flex-wrap gap-12 justify-center text-center">
-              <div>
+              <ScrollReveal delay={0}>
                 <p className="font-heading text-4xl md:text-5xl font-bold text-hero-foreground">300,000+</p>
                 <p className="text-hero-foreground/60 mt-1">Successful transactions monthly</p>
-              </div>
-              <div>
+              </ScrollReveal>
+              <ScrollReveal delay={0.15}>
                 <p className="font-heading text-4xl md:text-5xl font-bold text-hero-foreground">50,000+</p>
                 <p className="text-hero-foreground/60 mt-1">API requests per day</p>
-              </div>
-              <div>
+              </ScrollReveal>
+              <ScrollReveal delay={0.3}>
                 <p className="font-heading text-4xl md:text-5xl font-bold text-hero-foreground">200+</p>
                 <p className="text-hero-foreground/60 mt-1">Registered companies</p>
-              </div>
+              </ScrollReveal>
             </div>
           </div>
         </div>

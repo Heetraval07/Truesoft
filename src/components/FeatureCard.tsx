@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 interface FeatureCardProps {
   icon?: ReactNode;
@@ -6,11 +7,18 @@ interface FeatureCardProps {
   description: string;
   image?: string;
   bullets?: string[];
+  index?: number;
 }
 
-const FeatureCard = ({ icon, title, description, image, bullets }: FeatureCardProps) => {
+const FeatureCard = ({ icon, title, description, image, bullets, index = 0 }: FeatureCardProps) => {
   return (
-    <div className="bg-card rounded-xl border border-border p-6 card-hover group">
+    <motion.div
+      className="bg-card rounded-xl border border-border p-6 card-hover group"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+    >
       {image && (
         <div className="mb-4 overflow-hidden rounded-lg">
           <img src={image} alt={title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -33,7 +41,7 @@ const FeatureCard = ({ icon, title, description, image, bullets }: FeatureCardPr
           ))}
         </ul>
       )}
-    </div>
+    </motion.div>
   );
 };
 

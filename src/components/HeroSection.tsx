@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 interface HeroSectionProps {
   title: string;
@@ -28,8 +29,12 @@ const HeroSection = ({
     <section className="relative hero-gradient overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text */}
-          <div className="space-y-6 animate-fade-in-up">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+          >
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-hero-foreground leading-tight">
               {title}
             </h1>
@@ -37,19 +42,25 @@ const HeroSection = ({
               {subtitle}
             </p>
             {ctaText && (
-              <Link
-                to={ctaLink}
-                className="inline-block px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-semibold text-base hover:bg-accent/90 transition-all hover:shadow-lg hover:shadow-accent/20"
-              >
-                {ctaText}
-              </Link>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.5 }}>
+                <Link
+                  to={ctaLink}
+                  className="inline-block px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-semibold text-base hover:bg-accent/90 transition-all hover:shadow-lg hover:shadow-accent/20"
+                >
+                  {ctaText}
+                </Link>
+              </motion.div>
             )}
             {children}
-          </div>
+          </motion.div>
 
-          {/* Image */}
           {image && (
-            <div className="relative animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+            >
               <img
                 src={image}
                 alt={imageAlt}
@@ -58,18 +69,22 @@ const HeroSection = ({
               {overlay && (
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-hero/50 to-transparent" />
               )}
-            </div>
+            </motion.div>
           )}
         </div>
 
-        {/* Stats */}
         {stats && stats.length > 0 && (
           <div className="flex flex-wrap gap-8 mt-16 pt-8 border-t border-hero-foreground/10">
             {stats.map((stat, idx) => (
-              <div key={idx} className="animate-count-up" style={{ animationDelay: `${idx * 0.2}s` }}>
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5 + idx * 0.15, duration: 0.5, ease: "backOut" }}
+              >
                 <p className="font-heading text-3xl md:text-4xl font-bold text-accent">{stat.value}</p>
                 <p className="text-hero-foreground/60 text-sm mt-1">{stat.label}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         )}
