@@ -16,11 +16,11 @@ const Index = () => {
       {/* Hero */}
       <HeroSection
         title="Enterprise Software Solutions for Modern Businesses"
-        subtitle="TrueSoft delivers cutting-edge ERP, CRM, and digital transformation solutions that empower your business to scale globally."
+        subtitle="Truesoft delivers cutting-edge ERP, CRM, and digital transformation solutions that empower your business to scale globally."
         ctaText="Explore Our Solutions"
         ctaLink="/contact"
         image={heroHome}
-        imageAlt="TrueSoft Enterprise Dashboard"
+        imageAlt="Truesoft Enterprise Dashboard"
         stats={[
           { value: "500+", label: "Projects Delivered" },
           { value: "200+", label: "Trusted Companies" },
@@ -28,7 +28,7 @@ const Index = () => {
         ]}
       />
 
-      {/* Why Choose TrueSoft - Enterprise SaaS section */}
+      {/* Why Choose Truesoft - Enterprise SaaS section */}
       <section className="bg-gray-100 py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div
@@ -60,7 +60,7 @@ const Index = () => {
             <ScrollReveal>
               <div className="mb-12 text-center relative">
                 <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
-                  Why Choose TrueSoft?
+                  Why Choose Truesoft?
                 </h2>
                 <p className="max-w-3xl mx-auto text-lg text-muted-foreground">
                   We combine deep technical expertise with enterprise-grade solutions to help your business thrive.
@@ -414,7 +414,7 @@ const Index = () => {
             <div className="relative mt-10 w-full max-w-[320px] mx-auto md:max-w-[420px] md:w-auto lg:absolute lg:right-[40px] lg:bottom-[-40px] lg:w-[600px] lg:max-w-[50%] lg:min-h-[600px] lg:z-[2] lg:mt-0 lg:mx-0 pointer-events-none flex justify-center items-center lg:justify-end phone-container">
               <div className="phone-wrapper phone-container">
                 <img
-                  src="/illustrations/managed-services-phone.png"
+                  src={`${import.meta.env.BASE_URL}illustrations/managed-services-phone.png`}
                   alt="Managed Services"
                   className="phone-image"
                 />
@@ -427,7 +427,7 @@ const Index = () => {
       {/* CTA */}
       <CTASection
         title="Ready to Transform Your Business?"
-        description="Get in touch with our team to discover how TrueSoft can help you achieve your digital transformation goals."
+        description="Get in touch with our team to discover how Truesoft can help you achieve your digital transformation goals."
         ctaText="Get a Free Consultation"
       />
     </Layout>

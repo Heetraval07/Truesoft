@@ -19,7 +19,7 @@ export function FeatureShowcase() {
                   Enterprise-grade support for mission-critical systems
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  TrueSoft provides dedicated ERPNext, CRM, and cloud support with enterprise-level reliability. Our engineering team ensures your systems run securely, efficiently, and without interruption.
+                  Truesoft provides dedicated ERPNext, CRM, and cloud support with enterprise-level reliability. Our engineering team ensures your systems run securely, efficiently, and without interruption.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 gap-6">
@@ -75,8 +75,8 @@ export function FeatureShowcase() {
               "
             >
               <img
-                src="/illustrations/support-team.svg"
-                alt="TrueSoft Support Team"
+                src={`${import.meta.env.BASE_URL}illustrations/support-team.svg`}
+                alt="Truesoft Support Team"
                 className="
                   w-full
                   max-w-lg

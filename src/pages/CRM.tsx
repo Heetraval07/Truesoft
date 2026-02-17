@@ -37,7 +37,7 @@ const CRM = () => {
 
       <CTASection
         title="Supercharge Your Sales Team"
-        description="See how TrueSoft CRM can transform your customer relationships and accelerate revenue growth."
+        description="See how Truesoft CRM can transform your customer relationships and accelerate revenue growth."
         ctaText="Request a Free Demo"
       />
     </Layout>

@@ -37,7 +37,7 @@ const Odoo = () => {
 
       <CTASection
         title="Get Started with Odoo Today"
-        description="Let TrueSoft implement and customize Odoo to perfectly fit your business workflows."
+        description="Let Truesoft implement and customize Odoo to perfectly fit your business workflows."
         ctaText="Schedule a Demo"
       />
     </Layout>

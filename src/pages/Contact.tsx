@@ -20,9 +20,9 @@ const Contact = () => {
     <Layout>
       <HeroSection
         title="Get in Touch"
-        subtitle="Have a project in mind? Let's discuss how TrueSoft can help transform your business with the right technology solutions."
+        subtitle="Have a project in mind? Let's discuss how Truesoft can help transform your business with the right technology solutions."
         image={heroContact}
-        imageAlt="Contact TrueSoft"
+        imageAlt="Contact Truesoft"
         ctaText=""
       />
 

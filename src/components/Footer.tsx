@@ -25,8 +25,8 @@ const Footer = () => {
             <div className="flex items-center mb-4">
               <Link to="/" className="flex items-center">
                 <img
-                  src="/logo.png"
-                  alt="TrueSoft Logo"
+                  src={`${import.meta.env.BASE_URL}logo.png`}
+                  alt="Truesoft Logo"
                   width={140}
                   height={45}
                   className="h-10 w-auto object-contain"
@@ -88,7 +88,7 @@ const Footer = () => {
 
         <div className="border-t border-hero-foreground/10 mt-12 pt-8 text-center">
           <p className="text-hero-foreground/50 text-sm">
-            © {new Date().getFullYear()} TrueSoft. All rights reserved.
+            © {new Date().getFullYear()} Truesoft. All rights reserved.
           </p>
         </div>
       </div>

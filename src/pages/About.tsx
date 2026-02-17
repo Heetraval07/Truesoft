@@ -14,10 +14,10 @@ const About = () => {
   return (
     <Layout>
       <HeroSection
-        title="About TrueSoft"
+        title="About Truesoft"
         subtitle="We are a leading enterprise software company dedicated to delivering innovative solutions that empower businesses across the region."
         image={heroAbout}
-        imageAlt="TrueSoft Team"
+        imageAlt="Truesoft Team"
         ctaText="Our Services"
         ctaLink="/erpnext"
         premium={true}
@@ -51,7 +51,7 @@ const About = () => {
       </ContentSection>
 
       <StatsSection
-        title="Why Companies Trust TrueSoft"
+        title="Why Companies Trust Truesoft"
         stats={[
           { icon: <Award size={24} />, value: <AnimatedCounter value={10} />, label: "Years of Experience" },
           { icon: <Users size={24} />, value: <AnimatedCounter value={200} />, label: "Happy Clients" },
@@ -78,7 +78,7 @@ const About = () => {
       </ContentSection>
 
       <CTASection
-        title="Partner With TrueSoft"
+        title="Partner With Truesoft"
         description="Join hundreds of companies that trust us to power their digital transformation journey."
       />
     </Layout>
