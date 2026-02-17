@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import HeroSection from "@/components/HeroSection";
 import ContentSection from "@/components/ContentSection";
 import FeatureCard from "@/components/FeatureCard";
@@ -7,6 +8,7 @@ import heroCrm from "@/assets/hero-crm.png";
 import { UserCheck, TrendingUp, Mail, BarChart3, Repeat, Target } from "lucide-react";
 
 const CRM = () => {
+  useDocumentTitle("CRM");
   return (
     <Layout>
       <HeroSection

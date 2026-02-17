@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import HeroSection from "@/components/HeroSection";
 import ContentSection from "@/components/ContentSection";
 import FeatureCard from "@/components/FeatureCard";
@@ -7,6 +8,7 @@ import heroOdoo from "@/assets/hero-odoo.png";
 import { LayoutGrid, ShoppingCart, Factory, BookOpen, Truck, Wallet } from "lucide-react";
 
 const Odoo = () => {
+  useDocumentTitle("Odoo");
   return (
     <Layout>
       <HeroSection

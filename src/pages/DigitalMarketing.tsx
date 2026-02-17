@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import HeroSection from "@/components/HeroSection";
 import ContentSection from "@/components/ContentSection";
 import FeatureCard from "@/components/FeatureCard";
@@ -7,6 +8,7 @@ import heroDm from "@/assets/hero-digital-marketing.png";
 import { Search, Share2, BarChart3, Mail, PenTool, Megaphone } from "lucide-react";
 
 const DigitalMarketing = () => {
+  useDocumentTitle("Digital Marketing");
   return (
     <Layout>
       <HeroSection

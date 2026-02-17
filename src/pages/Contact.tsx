@@ -1,10 +1,12 @@
 import Layout from "@/components/Layout";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import HeroSection from "@/components/HeroSection";
 import heroContact from "@/assets/hero-contact.png";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
+  useDocumentTitle("Contact");
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", company: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -36,9 +38,9 @@ const Contact = () => {
               <div className="space-y-6">
                 {[
                   { icon: <Mail size={20} />, label: "Email", value: "info@truesoft.com" },
-                  { icon: <Phone size={20} />, label: "Phone", value: "+966 55 123 4567" },
-                  { icon: <MapPin size={20} />, label: "Address", value: "King Fahd Road, Riyadh, Saudi Arabia" },
-                  { icon: <Clock size={20} />, label: "Working Hours", value: "Sun - Thu: 9:00 AM - 6:00 PM" },
+                  { icon: <Phone size={20} />, label: "Phone", value: "054 765 8506" },
+                  { icon: <MapPin size={20} />, label: "Address", value: "Office 201-09, Al Nisf Building, Dubai Airport Road, Dubai, UAE" },
+                  { icon: <Clock size={20} />, label: "Working Hours", value: "Mon - Sat: 9:00 AM - 6:00 PM" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent flex-shrink-0">
@@ -89,7 +91,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-lg border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                      placeholder="+966 5X XXX XXXX"
+                      placeholder="054 XXX XXXX"
                     />
                   </div>
                   <div>

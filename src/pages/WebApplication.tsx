@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import HeroSection from "@/components/HeroSection";
 import ContentSection from "@/components/ContentSection";
 import FeatureCard from "@/components/FeatureCard";
@@ -7,6 +8,7 @@ import heroWebapp from "@/assets/hero-webapp.png";
 import { Code, Smartphone, Cloud, Database, Shield, Rocket } from "lucide-react";
 
 const WebApplication = () => {
+  useDocumentTitle("Web Application");
   return (
     <Layout>
       <HeroSection

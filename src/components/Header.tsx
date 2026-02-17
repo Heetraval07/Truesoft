@@ -21,11 +21,15 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-heading font-bold text-lg">T</span>
-          </div>
-          <span className="font-heading font-bold text-xl text-foreground">TrueSoft</span>
+        <Link to="/" className="flex items-center">
+          <img
+            src="/logo.png"
+            alt="TrueSoft Logo"
+            width={160}
+            height={50}
+            loading="eager"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -49,7 +53,7 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-3">
           <Link
             to="/contact"
-            className="px-5 py-2 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors"
+            className="px-5 py-2 rounded-lg bg-[#f07b49] text-white font-medium text-sm hover:bg-[#d96535] transition-all hover:shadow-[0_10px_25px_rgba(240,123,73,0.3)] hover:-translate-y-0.5"
           >
             Get Started
           </Link>
@@ -86,7 +90,7 @@ const Header = () => {
             <Link
               to="/contact"
               onClick={() => setMobileOpen(false)}
-              className="mt-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm text-center"
+              className="mt-2 px-4 py-3 rounded-lg bg-[#f07b49] text-white font-medium text-sm text-center hover:bg-[#d96535] transition-colors"
             >
               Get Started
             </Link>

@@ -22,11 +22,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-heading font-bold text-lg">T</span>
-              </div>
-              <span className="font-heading font-bold text-xl">TrueSoft</span>
+            <div className="flex items-center mb-4">
+              <Link to="/" className="flex items-center">
+                <img
+                  src="/logo.png"
+                  alt="TrueSoft Logo"
+                  width={140}
+                  height={45}
+                  className="h-10 w-auto object-contain"
+                />
+              </Link>
             </div>
             <p className="text-hero-foreground/70 text-sm leading-relaxed">
               Enterprise software solutions that transform your business. From ERP to CRM, we deliver excellence.
@@ -71,11 +76,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-hero-foreground/70 text-sm">
                 <Phone size={16} className="text-accent flex-shrink-0" />
-                +966 55 123 4567
+                054 765 8506
               </li>
               <li className="flex items-start gap-2 text-hero-foreground/70 text-sm">
                 <MapPin size={16} className="text-accent flex-shrink-0 mt-0.5" />
-                Riyadh, Saudi Arabia
+                Office 201-09, Al Nisf Building, Dubai Airport Road, Dubai, UAE
               </li>
             </ul>
           </div>

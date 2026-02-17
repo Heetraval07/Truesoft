@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import HeroSection from "@/components/HeroSection";
 import ContentSection from "@/components/ContentSection";
 import FeatureCard from "@/components/FeatureCard";
@@ -7,6 +8,7 @@ import heroErp from "@/assets/hero-erp.png";
 import { BarChart3, Package, FileText, Settings, Users, ShieldCheck } from "lucide-react";
 
 const ERPNext = () => {
+  useDocumentTitle("ERPNext");
   return (
     <Layout>
       <HeroSection
