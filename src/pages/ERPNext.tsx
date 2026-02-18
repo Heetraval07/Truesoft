@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import ContentSection from "@/components/ContentSection";
 import CTASection from "@/components/CTASection";
 import DashboardPreview from "@/components/DashboardPreview";
-import placeholderImg from "@/assets/placeholder.svg";
+import { publicUrl } from "@/lib/publicUrl";
 import {
   Package,
   Users,
@@ -23,7 +23,9 @@ import {
 
 const ERPNext = () => {
   useDocumentTitle("ERPNext");
-  const placeholder = placeholderImg;
+  const heroImg = publicUrl("illustrations/erp-hero.png");
+  const platformOverviewImg = publicUrl("illustrations/platform-overview.png");
+  const coreCapabilitiesImg = publicUrl("illustrations/core-capibilities-transparent.png");
 
   const modules = [
     { name: "Accounting", icon: Calculator },
@@ -45,7 +47,7 @@ const ERPNext = () => {
       <HeroSection
         title="ERPNext Solutions"
         subtitle="Comprehensive, open-source ERP system that covers all aspects of your business — from accounting and HR to manufacturing and sales."
-        image={placeholder}
+        image={heroImg}
         imageAlt="ERPNext Dashboard"
         ctaText="Request a Demo"
         stats={[
@@ -80,7 +82,7 @@ const ERPNext = () => {
               </ul>
               <div className="mt-6 flex justify-center items-center">
                 <img
-                  src={placeholder}
+                  src={platformOverviewImg}
                   alt="ERPNext Platform Overview"
                   className="platform-overview-image max-h-[260px] object-contain transition-transform duration-300 hover:scale-105"
                 />
@@ -102,7 +104,7 @@ const ERPNext = () => {
 
                 {/* Main image */}
                 <img
-                  src={placeholder}
+                  src={coreCapabilitiesImg}
                   alt="ERPNext Core Capabilities"
                   className="core-capabilities-image core-image floating-animation"
                 />

@@ -6,6 +6,9 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   base: mode === "production" ? "/Truesoft/" : "/",
+  define: {
+    "process.env.PUBLIC_URL": JSON.stringify(mode === "production" ? "/Truesoft" : ""),
+  },
   server: {
     host: "::",
     port: 8080,

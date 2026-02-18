@@ -2,6 +2,7 @@
   "name": "truesoft",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://heetraval07.github.io/Truesoft",
   "type": "module",
   "scripts": {
     "dev": "vite",

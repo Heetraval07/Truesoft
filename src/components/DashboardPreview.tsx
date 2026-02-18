@@ -1,10 +1,10 @@
 import { useState } from "react";
-import placeholderImg from "@/assets/placeholder.svg";
+import { publicUrl } from "@/lib/publicUrl";
 
 const slides = [
-  { src: placeholderImg, alt: "ERPNext Dashboard Preview 1" },
-  { src: placeholderImg, alt: "ERPNext Dashboard Preview 2" },
-  { src: placeholderImg, alt: "ERPNext Dashboard Preview 3" },
+  { src: publicUrl("illustrations/image-1.jpeg"), alt: "ERPNext Dashboard Preview 1" },
+  { src: publicUrl("illustrations/image-2.jpeg"), alt: "ERPNext Dashboard Preview 2" },
+  { src: publicUrl("illustrations/image-3.jpeg"), alt: "ERPNext Dashboard Preview 3" },
 ];
 
 const DashboardPreview = () => {

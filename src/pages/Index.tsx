@@ -5,11 +5,11 @@ import { FeatureShowcase } from "@/components/FeatureShowcase";
 import CTASection from "@/components/CTASection";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Zap, Users, Globe } from "lucide-react";
-import placeholderImg from "@/assets/placeholder.svg";
+import { publicUrl } from "@/lib/publicUrl";
 
 const Index = () => {
   useDocumentTitle();
-  const placeholder = placeholderImg;
+  const managedServicesImg = publicUrl("illustrations/managed-services-phone.png");
   return (
     <Layout>
       {/* Hero */}
@@ -302,7 +302,13 @@ const Index = () => {
                 duration-300
                 "
               >
-                <img src={placeholder} alt="Billing & Invoicing" className="w-full h-48 object-cover rounded-lg mb-6" />
+                <div className="mb-6 flex justify-center">
+                  <img
+                    src="/illustrations/billing-invoicing.webp"
+                    alt="Billing & Invoicing"
+                    className="block w-full max-w-[520px] h-auto object-contain rounded-2xl transition-all duration-300 ease hover:-translate-y-[5px]"
+                  />
+                </div>
                 <h3 className="font-heading text-2xl font-bold text-white mb-3">Billing & Invoicing</h3>
                 <ul className="space-y-2">
                   {["Advanced invoicing with accounting features", "Automated billing workflows", "Multi-currency support", "Full reporting and analytics"].map((item, i) => (
@@ -325,7 +331,13 @@ const Index = () => {
                 duration-300
                 "
               >
-                <img src={placeholder} alt="Seamless Integration" className="w-full h-48 object-cover rounded-lg mb-6" />
+                <div className="mb-6 flex justify-center">
+                  <img
+                    src="/illustrations/seamless-integration.webp"
+                    alt="Seamless Integration"
+                    className="block w-full max-w-[520px] h-auto object-contain rounded-2xl transition-all duration-300 ease hover:-translate-y-[5px]"
+                  />
+                </div>
                 <h3 className="font-heading text-2xl font-bold text-white mb-3">Seamless Integration</h3>
                 <ul className="space-y-2">
                   {["API-first architecture", "Seamless integration with existing software", "Onboarding support to get started quickly", "Flexible hosting options"].map((item, i) => (
@@ -405,7 +417,7 @@ const Index = () => {
             <div className="relative mt-10 w-full max-w-[320px] mx-auto md:max-w-[420px] md:w-auto lg:absolute lg:right-[40px] lg:bottom-[-40px] lg:w-[600px] lg:max-w-[50%] lg:min-h-[600px] lg:z-[2] lg:mt-0 lg:mx-0 pointer-events-none flex justify-center items-center lg:justify-end phone-container">
               <div className="phone-wrapper phone-container">
                 <img
-                  src={placeholder}
+                  src={managedServicesImg}
                   alt="Managed Services"
                   className="phone-image"
                 />
