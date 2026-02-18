@@ -122,7 +122,7 @@ const ERPNext = () => {
               return (
                 <div
                   key={module.name}
-                  className={`module-card ${index === 0 ? "active" : ""}`}
+                  className="module-card"
                 >
                   <div className="module-icon" aria-hidden="true">
                     <Icon size={32} strokeWidth={1.5} />

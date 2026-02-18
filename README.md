@@ -62,6 +62,19 @@ This project is built with:
 
 ## How can I deploy this project?
 
+**GitHub Pages (Automatic)**
+
+This project is configured to automatically deploy to GitHub Pages when you push to the `main` branch. The deployment is handled by GitHub Actions workflow (`.github/workflows/deploy-pages.yml`).
+
+To enable GitHub Pages:
+1. Go to your repository Settings → Pages
+2. Under "Source", select "GitHub Actions"
+3. Push to the `main` branch to trigger automatic deployment
+
+The site will be available at: `https://<your-username>.github.io/Truesoft/`
+
+**Lovable**
+
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?

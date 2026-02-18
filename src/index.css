@@ -886,14 +886,14 @@
 }
 
 .module-card {
-  background: white;
+  background: #ffffff;
+  color: #0A2540;
+  border: 1px solid #E6E8EC;
   border-radius: 16px;
   padding: 35px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
 }
 
 .module-icon {
@@ -921,11 +921,12 @@
   color: #0f172a;
 }
 
-/* Hover effect — Truesoft orange */
+/* Hover effect — orange only on hover */
 .module-card:hover {
-  background: #f07b49;
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(240,123,73,0.3);
+  background: linear-gradient(135deg, #F97316, #FB923C);
+  color: white;
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(249,115,22,0.25);
 }
 
 .module-card:hover h3 {
@@ -937,23 +938,6 @@
 }
 
 .module-card:hover .module-icon svg {
-  color: white;
-}
-
-/* Active card default (Accounting like screenshot) */
-.module-card.active {
-  background: linear-gradient(135deg,#f07b49,#ff9a6b);
-}
-
-.module-card.active h3 {
-  color: white;
-}
-
-.module-card.active .module-icon {
-  background: rgba(255,255,255,0.2);
-}
-
-.module-card.active .module-icon svg {
   color: white;
 }
 
