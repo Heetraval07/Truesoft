@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -23,7 +24,7 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
-            src={`${import.meta.env.BASE_URL}logo.png`}
+            src={logoImg}
             alt="Truesoft Logo"
             width={160}
             height={50}

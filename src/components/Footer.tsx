@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 const footerLinks = {
   services: [
@@ -25,7 +26,7 @@ const Footer = () => {
             <div className="flex items-center mb-4">
               <Link to="/" className="flex items-center">
                 <img
-                  src={`${import.meta.env.BASE_URL}logo.png`}
+                  src={logoImg}
                   alt="Truesoft Logo"
                   width={140}
                   height={45}

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Particles } from "./ui/Particles";
+import placeholderImg from "@/assets/placeholder.svg";
 
 interface HeroSectionProps {
   title?: string;
@@ -31,6 +32,7 @@ const HeroSection = ({
   claudion = false,
 }: HeroSectionProps) => {
   if (claudion) {
+    const heroImg = placeholderImg;
     return (
       <section className="relative overflow-hidden bg-gray-100 pt-2 pb-16">
         <div
@@ -103,7 +105,7 @@ const HeroSection = ({
               <div className="hero-visual">
                 <div className="hero-image-wrapper">
                   <img
-                    src="/illustrations/erp-hero.png"
+                    src={heroImg}
                     className="hero-image"
                   />
                 </div>

@@ -1,3 +1,5 @@
+import supportTeamImg from "@/assets/illustrations/support-team.svg";
+
 export function FeatureShowcase() {
   return (
     <section className="bg-gray-100 py-20">
@@ -75,7 +77,7 @@ export function FeatureShowcase() {
               "
             >
               <img
-                src="/illustrations/support-team.svg"
+                src={supportTeamImg}
                 alt="Truesoft Support Team"
                 className="
                   w-full
