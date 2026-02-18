@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
-import HeroCards from "./HeroCards";
+import { Particles } from "./ui/Particles";
 
 interface HeroSectionProps {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   ctaText?: string;
   ctaLink?: string;
   image?: string;
@@ -14,11 +14,12 @@ interface HeroSectionProps {
   children?: ReactNode;
   overlay?: boolean;
   premium?: boolean;
+  claudion?: boolean;
 }
 
 const HeroSection = ({
-  title,
-  subtitle,
+  title = "Enterprise Software Solutions for Modern Businesses",
+  subtitle = "Truesoft delivers cutting-edge ERP, CRM, and digital transformation solutions that empower your business to scale globally.",
   ctaText = "Get Started",
   ctaLink = "/contact",
   image,
@@ -27,7 +28,93 @@ const HeroSection = ({
   children,
   overlay = false,
   premium = false,
+  claudion = false,
 }: HeroSectionProps) => {
+  if (claudion) {
+    return (
+      <section className="relative overflow-hidden bg-gray-100 pt-2 pb-16">
+        <div
+          className="mx-auto"
+          style={{ maxWidth: 1280, margin: "20px auto 0", padding: "40px 60px" }}
+        >
+          <div
+            className="hero-section relative overflow-hidden"
+            style={{
+              borderRadius: 24,
+              padding: 0,
+              background: "#123158",
+            }}
+          >
+            <div className="line-design" aria-hidden />
+            <div className="accent-line" aria-hidden />
+            {/* Animated gradient background - hero container only */}
+            <div
+              className="hero-animated-gradient z-0"
+              style={{ borderRadius: 24 }}
+              aria-hidden
+            />
+            {/* Particles background - behind all hero content */}
+            <div className="absolute inset-0 z-0">
+              <Particles />
+            </div>
+            {/* Background visual effects */}
+            <div className="absolute inset-0 pointer-events-none z-0">
+              <div className="absolute right-[-150px] top-[50px] w-[500px] h-[500px] bg-teal-500/20 blur-[120px] rounded-full" />
+              <div className="absolute left-[-100px] bottom-[80px] w-[400px] h-[400px] bg-[#1a4b7a]/25 blur-[100px] rounded-full" />
+              <div className="absolute right-[10%] top-[30%] w-[300px] h-[300px] bg-[#f07b49]/10 blur-[80px] rounded-full" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#123158]/40 via-transparent to-[#0f2a4a]/30" />
+            </div>
+
+            <div className="hero-container relative z-10">
+              <div className="hero-content">
+                <h1
+                  className="font-heading text-white"
+                  style={{
+                    fontSize: 64,
+                    lineHeight: 1.1,
+                    fontWeight: 700,
+                    maxWidth: 620,
+                  }}
+                >
+                  {title}
+                </h1>
+                <p className="text-lg text-white/70 max-w-xl leading-relaxed mt-6">
+                  {subtitle}
+                </p>
+                <Link to={ctaLink} className="inline-block mt-6">
+                  <button className="bg-[#f07b49] hover:bg-[#e56a35] text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
+                    {ctaText}
+                  </button>
+                </Link>
+                {stats && stats.length > 0 && (
+                  <div className="flex flex-wrap gap-8 pt-8 mt-8 border-t border-white/10">
+                    {stats.map((stat, idx) => (
+                      <div key={idx}>
+                        <p className="font-heading font-bold text-3xl text-[#f07b49]">
+                          {stat.value}
+                        </p>
+                        <p className="text-white/60 text-sm mt-1">{stat.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div className="hero-visual">
+                <div className="hero-image-wrapper">
+                  <img
+                    src="/illustrations/erp-hero.png"
+                    className="hero-image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="bg-gray-100 py-16">
       <div className="max-w-7xl mx-auto px-6">
@@ -41,67 +128,16 @@ const HeroSection = ({
             background: "linear-gradient(135deg, #123158 0%, #1a4b7a 50%, #123158 100%)",
           }}
         >
+          {/* Particles background - behind all hero content */}
+          <div className="absolute inset-0 z-0">
+            <Particles />
+          </div>
           {!premium && (
             <>
-              {/* Layered background shapes (Claudion-style) */}
-              {/* Step 2: Large dark rounded shape behind image */}
-              <div
-                className="
-absolute
-right-10
-bottom-10
-w-[420px]
-h-[280px]
-bg-[#123158]/50
-rounded-3xl
-z-0
-"
-              ></div>
-              {/* Step 3: Curved ribbon using gradient arc */}
-              <div
-                className="
-absolute
-right-0
-top-10
-w-[500px]
-h-[500px]
-rounded-full
-border-[40px]
-border-[#1a4b7a]/40
-border-l-transparent
-border-b-transparent
-rotate-12
-z-0
-"
-              ></div>
-              {/* Step 4: Secondary darker blob */}
-              <div
-                className="
-absolute
-right-20
-bottom-0
-w-[350px]
-h-[250px]
-bg-[#123158]/40
-rounded-full
-blur-2xl
-z-0
-"
-              ></div>
-              {/* Step 5: Subtle right-side fade overlay */}
-              <div
-                className="
-absolute
-right-0
-top-0
-w-[400px]
-h-full
-bg-gradient-to-l
-from-[#1a4b7a]/10
-to-transparent
-z-0
-"
-              ></div>
+              <div className="absolute right-10 bottom-10 w-[420px] h-[280px] bg-[#123158]/50 rounded-3xl z-0" />
+              <div className="absolute right-0 top-10 w-[500px] h-[500px] rounded-full border-[40px] border-[#1a4b7a]/40 border-l-transparent border-b-transparent rotate-12 z-0" />
+              <div className="absolute right-20 bottom-0 w-[350px] h-[250px] bg-[#123158]/40 rounded-full blur-2xl z-0" />
+              <div className="absolute right-0 top-0 w-[400px] h-full bg-gradient-to-l from-[#1a4b7a]/10 to-transparent z-0" />
             </>
           )}
 
@@ -144,7 +180,6 @@ z-0
                 className={`w-full rounded-2xl shadow-2xl object-cover ${premium ? 'hero-premium-image' : 'max-h-[500px]'} relative z-10`}
               />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-[#1a4b7a]/20 to-transparent pointer-events-none z-[15]" />
-              <HeroCards />
               {overlay && (
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-hero/50 to-transparent pointer-events-none z-[15]" />
               )}

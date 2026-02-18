@@ -4,7 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import { FeatureShowcase } from "@/components/FeatureShowcase";
 import CTASection from "@/components/CTASection";
 import ScrollReveal from "@/components/ScrollReveal";
-import heroHome from "@/assets/hero-home.png";
 import featureBilling from "@/assets/feature-billing.png";
 import featureIntegration from "@/assets/feature-integration.png";
 import { Zap, Users, Globe } from "lucide-react";
@@ -15,17 +14,9 @@ const Index = () => {
     <Layout>
       {/* Hero */}
       <HeroSection
-        title="Enterprise Software Solutions for Modern Businesses"
-        subtitle="Truesoft delivers cutting-edge ERP, CRM, and digital transformation solutions that empower your business to scale globally."
+        claudion
         ctaText="Explore Our Solutions"
         ctaLink="/contact"
-        image={heroHome}
-        imageAlt="Truesoft Enterprise Dashboard"
-        stats={[
-          { value: "500+", label: "Projects Delivered" },
-          { value: "200+", label: "Trusted Companies" },
-          { value: "50+", label: "Expert Engineers" },
-        ]}
       />
 
       {/* Why Choose Truesoft - Enterprise SaaS section */}

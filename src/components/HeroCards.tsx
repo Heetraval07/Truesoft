@@ -1,18 +1,18 @@
 const cards = [
   {
-    title: "Starting from",
-    value: "AED 199/month",
-    subtitle: "ERPNext Hosting",
+    title: "",
+    value: "9+",
+    subtitle: "Years In Business",
   },
   {
-    title: "Active Users",
-    value: "1200+",
-    subtitle: "Trusted businesses",
+    title: "",
+    value: "300+",
+    subtitle: "Active Users",
   },
   {
-    title: "Projects Delivered",
+    title: "",
     value: "500+",
-    subtitle: "Enterprise clients",
+    subtitle: "Projects Delivered",
   },
 ];
 

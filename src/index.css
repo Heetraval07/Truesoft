@@ -103,10 +103,43 @@
   }
 }
 
+@keyframes hero-gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-animated-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    #123158 0%,
+    #0f2a4a 20%,
+    #0b223d 40%,
+    #091d33 50%,
+    #0b223d 60%,
+    #0f2a4a 80%,
+    #123158 100%
+  );
+  background-size: 200% 200%;
+  animation: hero-gradient-flow 12s ease-in-out infinite;
+}
+
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-12px); }
   100% { transform: translateY(0px); }
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
 }
 
 @keyframes floatPhone {
@@ -391,14 +424,107 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-.stat-card {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  padding: 18px 24px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+/* Hero Container Layout */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px;
 }
+
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  
+  .hero-visual {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+  }
+
+  .hero-image-wrapper {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .stat-users {
+    left: -20px;
+  }
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 600px;
+}
+
+/* Hero Visual Container */
+.hero-visual {
+  position: relative;
+  width: 520px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero Image Wrapper */
+.hero-image-wrapper {
+  position: relative;
+  width: 520px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Hero Image */
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Stat Card Base Style */
+.stat-card {
+  position: absolute;
+  background: rgba(20, 40, 70, 0.55);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  min-width: 160px;
+}
+
+.stat-number {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* Stat Card Positions */
+.stat-years {
+  top: 20px;
+  right: 20px;
+}
+
+.stat-users {
+  top: 50%;
+  left: -60px;
+  transform: translateY(-50%);
+}
+
+.stat-projects {
+  bottom: 20px;
+  right: 20px;
+}
+
 
 /* Stats Section - upgraded premium stats */
 .stats-section {
@@ -423,3 +549,430 @@
   background: rgba(255,255,255,0.08);
   transform: translateY(-4px);
 }
+
+/* Hero Section - abstract top-right curved design (Claudion-style) */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  right: -150px;
+  top: -150px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+    rgba(0,194,168,0.15),
+    transparent 60%);
+  z-index: 0;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: 50px;
+  top: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.08);
+  z-index: 0;
+}
+
+/* Subtle curved lines background */
+.hero-section .line-design {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.05);
+  top: -200px;
+  right: -200px;
+}
+
+/* Floating accent line */
+.hero-section .accent-line {
+  position: absolute;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00C2A8, transparent);
+  top: 120px;
+  right: 220px;
+  border-radius: 4px;
+}
+
+/* ERPNext - Info cards grid (Platform Overview + Core Capabilities) */
+.erp-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .erp-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.erp-info-card {
+  background: #f5f7fa;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.erp-info-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f4c5c;
+  margin-bottom: 16px;
+}
+
+.erp-info-list {
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.erp-info-list li {
+  margin-bottom: 8px;
+  color: #4a5568;
+}
+
+/* ERPNext - Core Capabilities visual with layered pattern */
+.core-capabilities-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Reduce background pattern size */
+.core-pattern {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+
+  background: radial-gradient(
+    circle,
+    rgba(0, 194, 168, 0.15) 0%,
+    transparent 70%
+  );
+
+  border-radius: 50%;
+
+  z-index: 1;
+}
+
+/* Reduce image size + optional glow */
+.core-image {
+  width: 75%;
+  max-width: 340px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 10px 20px rgba(0, 194, 168, 0.15));
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating-animation {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* ERPNext - light, blended illustration treatment (Claudion-style) */
+.erp-image-wrapper {
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.erp-image-light {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+
+  /*
+    On light card backgrounds, `mix-blend-mode: lighten` can wash out
+    light/white PNG illustrations completely. `multiply` keeps the
+    soft "blended" feel while remaining visible.
+  */
+  mix-blend-mode: multiply;
+  opacity: 0.96;
+
+  filter:
+    brightness(1.02)
+    contrast(1.02)
+    saturate(0.95)
+    drop-shadow(0 10px 25px rgba(0,0,0,0.08));
+
+  transition: all 0.3s ease;
+}
+
+.erp-image-light:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+/* ERPNext - Platform Overview image */
+.platform-overview-image {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 20px;
+
+  /* light blended look */
+  opacity: 0.95;
+  mix-blend-mode: normal;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  transition: transform 0.3s ease;
+}
+
+.platform-overview-image:hover {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  .platform-overview-image {
+    max-width: 100%;
+  }
+}
+
+/* ERP Dashboard Preview - Claudion-style dark carousel */
+.erp-dashboard-section {
+  background: linear-gradient(
+    135deg,
+    #022c2c 0%,
+    #033a3a 40%,
+    #022222 100%
+  );
+  padding: 80px 0;
+  border-radius: 20px;
+  margin: 60px auto;
+  width: 95%;
+  overflow: hidden;
+}
+
+.erp-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px 40px;
+}
+
+.erp-dashboard-header h2 {
+  color: white;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.erp-nav-buttons {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: white;
+  color: black;
+}
+
+.erp-carousel-wrapper {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.erp-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.erp-slide {
+  transition: all 0.4s ease;
+}
+
+.erp-slide img {
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.erp-slide.active img {
+  width: 820px;
+  height: auto;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.erp-slide.prev img,
+.erp-slide.next img {
+  width: 500px;
+  opacity: 0.25;
+  transform: scale(0.9);
+}
+
+.erp-slide.active img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .erp-slide.active img {
+    width: 95%;
+  }
+
+  .erp-slide.prev,
+  .erp-slide.next {
+    display: none;
+  }
+}
+
+/* ERPNext Modules - responsive grid of cards */
+.erp-modules-section {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.modules-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #0f172a;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.module-card {
+  background: white;
+  border-radius: 16px;
+  padding: 35px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+}
+
+.module-icon {
+  width: 70px;
+  height: 70px;
+  background: #f1f5f9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+}
+
+.module-icon img {
+  width: 32px;
+}
+
+.module-icon svg {
+  color: #0f172a;
+}
+
+.module-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Hover effect — Truesoft orange */
+.module-card:hover {
+  background: #f07b49;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(240,123,73,0.3);
+}
+
+.module-card:hover h3 {
+  color: white;
+}
+
+.module-card:hover .module-icon {
+  background: rgba(255,255,255,0.2);
+}
+
+.module-card:hover .module-icon svg {
+  color: white;
+}
+
+/* Active card default (Accounting like screenshot) */
+.module-card.active {
+  background: linear-gradient(135deg,#f07b49,#ff9a6b);
+}
+
+.module-card.active h3 {
+  color: white;
+}
+
+.module-card.active .module-icon {
+  background: rgba(255,255,255,0.2);
+}
+
+.module-card.active .module-icon svg {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .modules-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .modules-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
