@@ -405,7 +405,7 @@ const Index = () => {
             <div className="relative mt-10 w-full max-w-[320px] mx-auto md:max-w-[420px] md:w-auto lg:absolute lg:right-[40px] lg:bottom-[-40px] lg:w-[600px] lg:max-w-[50%] lg:min-h-[600px] lg:z-[2] lg:mt-0 lg:mx-0 pointer-events-none flex justify-center items-center lg:justify-end phone-container">
               <div className="phone-wrapper phone-container">
                 <img
-                  src={`${import.meta.env.BASE_URL}illustrations/managed-services-phone.png`}
+                  src="/illustrations/managed-services-phone.png"
                   alt="Managed Services"
                   className="phone-image"
                 />

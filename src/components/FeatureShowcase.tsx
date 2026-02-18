@@ -75,7 +75,7 @@ export function FeatureShowcase() {
               "
             >
               <img
-                src={`${import.meta.env.BASE_URL}illustrations/support-team.svg`}
+                src="/illustrations/support-team.svg"
                 alt="Truesoft Support Team"
                 className="
                   w-full
