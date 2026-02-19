@@ -19,8 +19,8 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
-      <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
+    <header className="sticky top-0 z-50 w-full bg-card/95 backdrop-blur-md border-b border-border shadow-sm relative">
+      <div className="w-full max-w-7xl mx-auto flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
@@ -70,10 +70,10 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav - absolute dropdown */}
       {mobileOpen && (
-        <div className="lg:hidden bg-card border-t border-border animate-fade-in">
-          <nav className="flex flex-col p-4 gap-1">
+        <div className="absolute top-full left-0 w-full bg-white shadow-lg flex flex-col p-4 lg:hidden z-50 border-b border-border animate-fade-in">
+          <nav className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}

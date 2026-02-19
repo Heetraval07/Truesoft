@@ -3,14 +3,17 @@ import { publicUrl } from "@/lib/publicUrl";
 export function FeatureShowcase() {
   const supportTeamImg = publicUrl("illustrations/support-team.svg");
   return (
-    <section className="bg-gray-100 py-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-gray-100 py-12 sm:py-16 lg:py-20">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className="
             bg-[#123158]/5
             rounded-3xl
-            px-12
-            py-16
+            px-6
+            sm:px-10
+            lg:px-12
+            py-12
+            sm:py-16
             relative overflow-hidden
           "
         >
@@ -18,7 +21,7 @@ export function FeatureShowcase() {
             {/* Left: content */}
             <div className="flex flex-col justify-center space-y-8">
               <div>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                   Enterprise-grade support for mission-critical systems
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">

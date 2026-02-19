@@ -19,7 +19,7 @@ const footerLinks = {
 const Footer = () => {
   return (
     <footer className="hero-gradient text-hero-foreground">
-      <div className="container mx-auto px-4 lg:px-8 py-16">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>

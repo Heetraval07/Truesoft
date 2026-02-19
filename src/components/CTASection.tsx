@@ -17,8 +17,8 @@ const CTASection = ({
   ctaLink = "/contact",
 }: CTASectionProps) => {
   return (
-    <section className="py-20">
-      <div className="max-w-5xl mx-auto px-6">
+    <section className="py-12 sm:py-16 lg:py-20">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeUp>
           <div className="cta-section glow-hover">
             <h2 className="cta-section-heading">{title}</h2>

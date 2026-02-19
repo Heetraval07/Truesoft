@@ -34,15 +34,11 @@ const HeroSection = ({
   if (claudion) {
     const heroImg = image || publicUrl("illustrations/Frappe-removebg-preview.png");
     return (
-      <section className="relative overflow-hidden bg-gray-100 pt-2 pb-16">
-        <div
-          className="mx-auto"
-          style={{ maxWidth: 1280, margin: "20px auto 0", padding: "40px 60px" }}
-        >
+      <section className="relative overflow-hidden bg-gray-100 px-6 sm:px-8 lg:px-16 py-16">
+        <div className="w-full max-w-7xl mx-auto mt-5 sm:mt-6 lg:mt-8">
           <div
-            className="hero-section relative overflow-hidden"
+            className="hero-section relative overflow-hidden rounded-3xl"
             style={{
-              borderRadius: 24,
               padding: 0,
               background: "#123158",
             }}
@@ -51,8 +47,7 @@ const HeroSection = ({
             <div className="accent-line" aria-hidden />
             {/* Animated gradient background - hero container only */}
             <div
-              className="hero-animated-gradient z-0"
-              style={{ borderRadius: 24 }}
+              className="hero-animated-gradient z-0 rounded-3xl"
               aria-hidden
             />
             {/* Particles background - behind all hero content */}
@@ -67,32 +62,26 @@ const HeroSection = ({
               <div className="absolute inset-0 bg-gradient-to-br from-[#123158]/40 via-transparent to-[#0f2a4a]/30" />
             </div>
 
-            <div className="hero-container relative z-10">
-              <div className="hero-content">
-                <h1
-                  className="font-heading text-white"
-                  style={{
-                    fontSize: 64,
-                    lineHeight: 1.1,
-                    fontWeight: 700,
-                    maxWidth: 620,
-                  }}
-                >
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10 py-8 sm:py-12 lg:py-16 lg:px-20">
+              <div className="w-full lg:w-1/2 text-center lg:text-left hero-content">
+                <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight break-words max-w-xl mx-auto lg:mx-0">
                   {title}
                 </h1>
-                <p className="text-lg text-white/70 max-w-xl leading-relaxed mt-6">
+                <p className="text-base sm:text-lg lg:text-xl text-white/70 max-w-xl leading-relaxed mt-4 mx-auto lg:mx-0">
                   {subtitle}
                 </p>
-                <Link to={ctaLink} className="inline-block mt-6">
-                  <button className="bg-[#f07b49] hover:bg-[#e56a35] text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
-                    {ctaText}
-                  </button>
-                </Link>
+                <div className="mt-6 flex justify-center lg:justify-start">
+                  <Link to={ctaLink} className="inline-block">
+                    <button className="bg-[#f07b49] hover:bg-[#e56a35] text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
+                      {ctaText}
+                    </button>
+                  </Link>
+                </div>
                 {stats && stats.length > 0 && (
-                  <div className="flex flex-wrap gap-8 pt-8 mt-8 border-t border-white/10">
+                  <div className="flex flex-wrap gap-6 sm:gap-8 pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-white/10 justify-center lg:justify-start">
                     {stats.map((stat, idx) => (
                       <div key={idx}>
-                        <p className="font-heading font-bold text-3xl text-[#f07b49]">
+                        <p className="font-heading font-bold text-2xl sm:text-3xl text-[#f07b49]">
                           {stat.value}
                         </p>
                         <p className="text-white/60 text-sm mt-1">{stat.label}</p>
@@ -102,10 +91,10 @@ const HeroSection = ({
                 )}
               </div>
 
-              <div className="hero-visual">
+              <div className="w-full lg:w-1/2 flex justify-center hero-visual">
                 <img
                   src={heroImg}
-                  className="hero-image hero-image-blend"
+                  className="hero-image hero-image-blend w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl h-auto object-contain"
                   alt={imageAlt}
                 />
               </div>
@@ -117,13 +106,12 @@ const HeroSection = ({
   }
 
   return (
-    <section className="bg-gray-100 py-16">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-gray-100 py-12 sm:py-16 lg:py-20">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`hero-section relative overflow-hidden ${premium ? 'hero-premium' : 'rounded-3xl px-12 py-16 shadow-xl'}`}
+          className={`hero-section relative overflow-hidden ${premium ? 'hero-premium py-12 sm:py-16 lg:py-24 xl:py-[100px] px-6 sm:px-10 lg:px-12' : 'rounded-3xl px-6 sm:px-10 lg:px-12 py-12 sm:py-16 shadow-xl'}`}
           style={premium ? {
             background: "linear-gradient(135deg, #123158 0%, #0f2a4a 50%, #0b223d 100%)",
-            padding: "100px 0",
             borderRadius: "28px",
           } : {
             background: "linear-gradient(135deg, #123158 0%, #1a4b7a 50%, #123158 100%)",
@@ -142,17 +130,17 @@ const HeroSection = ({
             </>
           )}
 
-          <div className={`grid lg:grid-cols-2 gap-12 items-center ${premium ? 'px-12' : ''}`}>
+          <div className={`flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 ${premium ? 'px-6 sm:px-10 lg:px-12' : ''}`}>
           <motion.div
-            className={`space-y-6 relative z-20 ${premium ? 'hero-premium-content' : ''}`}
+            className={`w-full lg:w-1/2 space-y-6 relative z-20 text-center lg:text-left ${premium ? 'hero-premium-content' : ''}`}
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
           >
-            <h1 className={`font-heading ${premium ? 'hero-premium-title' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold text-hero-foreground ${premium ? '' : 'leading-tight'}`}>
+            <h1 className={`font-heading font-bold text-hero-foreground leading-tight ${premium ? 'hero-premium-title text-3xl sm:text-4xl lg:text-5xl' : 'text-3xl sm:text-4xl lg:text-5xl xl:text-6xl'}`}>
               {title}
             </h1>
-            <p className={`${premium ? 'hero-premium-subtitle' : 'text-hero-foreground/80 text-lg md:text-xl'} max-w-lg leading-relaxed`}>
+            <p className={`${premium ? 'hero-premium-subtitle text-base sm:text-lg' : 'text-hero-foreground/80 text-base sm:text-lg lg:text-xl'} max-w-lg leading-relaxed mx-auto lg:mx-0`}>
               {subtitle}
             </p>
             {ctaText && (
@@ -170,7 +158,7 @@ const HeroSection = ({
 
           {image && (
             <motion.div
-              className={`relative z-20 ${premium ? 'hero-premium-image-wrapper' : ''}`}
+              className={`w-full lg:w-1/2 flex justify-center relative z-20 ${premium ? 'hero-premium-image-wrapper' : ''}`}
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
@@ -178,7 +166,7 @@ const HeroSection = ({
               <img
                 src={image}
                 alt={imageAlt}
-                className={`w-full rounded-2xl shadow-2xl object-cover ${premium ? 'hero-premium-image' : 'max-h-[500px]'} relative z-10`}
+                className={`w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-2xl shadow-2xl object-cover ${premium ? 'hero-premium-image' : 'max-h-[500px]'} relative z-10`}
               />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-[#1a4b7a]/20 to-transparent pointer-events-none z-[15]" />
               {overlay && (

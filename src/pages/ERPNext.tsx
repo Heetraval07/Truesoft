@@ -56,13 +56,13 @@ const ERPNext = () => {
         ]}
       />
 
-      <section className="bg-gradient-to-b from-white to-slate-50 pt-20 pb-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-[60px]">
+      <section className="bg-gradient-to-b from-white to-slate-50 pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold tracking-[0.2em] text-gray-500">
               ERP PLATFORM
             </p>
-            <h2 className="mt-3 font-heading text-3xl sm:text-4xl font-bold text-[#123158]">
+            <h2 className="mt-3 font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#123158]">
               What is ERPNext?
             </h2>
             <p className="mt-4 text-base sm:text-lg text-gray-500 leading-relaxed">
@@ -70,9 +70,9 @@ const ERPNext = () => {
             </p>
           </div>
 
-          <div className="erp-info-grid">
+          <div className="flex flex-col lg:flex-row gap-8 items-center mt-8 sm:mt-10 lg:mt-12">
             {/* Left card - Platform Overview */}
-            <div className="erp-info-card">
+            <div className="w-full lg:w-1/2 erp-info-card">
               <h3 className="erp-info-title">Platform Overview</h3>
               <ul className="erp-info-list">
                 <li>Open-source ERP platform</li>
@@ -89,7 +89,7 @@ const ERPNext = () => {
             </div>
 
             {/* Right card - Core Capabilities */}
-            <div className="erp-info-card">
+            <div className="w-full lg:w-1/2 erp-info-card">
               <h3 className="erp-info-title">Core Capabilities</h3>
               <ul className="erp-info-list">
                 <li>Modular architecture</li>
@@ -115,10 +115,10 @@ const ERPNext = () => {
 
       <DashboardPreview />
 
-      <section className="erp-modules-section">
-        <div className="container">
-          <h2 className="modules-title">ERPNext Modules</h2>
-          <div className="modules-grid">
+      <section className="erp-modules-section py-12 sm:py-16 lg:py-20">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="modules-title text-3xl sm:text-4xl lg:text-5xl">ERPNext Modules</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {modules.map((module, index) => {
               const Icon = module.icon;
               return (

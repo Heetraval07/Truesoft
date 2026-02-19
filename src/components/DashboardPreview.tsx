@@ -15,16 +15,16 @@ const DashboardPreview = () => {
   const goNext = () => setCurrentIndex((i) => (i + 1) % total);
 
   return (
-    <section className="w-full px-4 sm:px-6">
+    <section className="w-full overflow-hidden px-4 sm:px-6 lg:px-8">
       <div
-        className="max-w-7xl mx-auto py-24 rounded-3xl overflow-hidden px-6 lg:px-12"
+        className="max-w-7xl mx-auto py-12 sm:py-16 lg:py-24 rounded-3xl overflow-hidden px-4 sm:px-6 lg:px-12"
         style={{
           background: "linear-gradient(135deg, #0B2A4A 0%, #123A63 100%)",
         }}
       >
         {/* Header */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-10">
-          <h2 className="text-4xl font-semibold text-white">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-8 sm:mb-10">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white">
             Dashboard Preview
           </h2>
           <div className="flex items-center gap-3">
@@ -72,9 +72,9 @@ const DashboardPreview = () => {
         </div>
 
         {/* Carousel */}
-        <div className="overflow-hidden relative">
+        <div className="overflow-hidden relative px-4 sm:px-6 lg:px-0">
           <div
-            className="flex gap-8 transition-transform duration-[600ms] ease-out"
+            className="flex gap-6 sm:gap-8 transition-transform duration-[600ms] ease-out"
             style={{
               transform: `translateX(calc(-${currentIndex} * (75% + 32px)))`,
             }}
@@ -82,14 +82,13 @@ const DashboardPreview = () => {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="w-[75%] flex-shrink-0"
-                style={{ minWidth: "75%" }}
+                className="w-[75%] flex-shrink-0 min-w-[75%]"
               >
                 <div className="bg-white rounded-[20px] p-3 shadow-[0_20px_60px_rgba(0,0,0,0.25)] overflow-hidden group">
                   <img
                     src={slide.src}
                     alt={slide.alt}
-                    className="w-full h-auto rounded-xl object-cover transition-transform duration-[400ms] ease-out group-hover:scale-105"
+                    className="w-full max-w-xs sm:max-w-md lg:max-w-lg mx-auto h-auto rounded-xl object-cover transition-transform duration-[400ms] ease-out group-hover:scale-105"
                   />
                 </div>
               </div>

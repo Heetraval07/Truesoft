@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={import.meta.env.BASE_URL === "/" ? "/" : import.meta.env.BASE_URL.replace(/\/$/, "")}>
+      <BrowserRouter basename="/Truesoft">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />

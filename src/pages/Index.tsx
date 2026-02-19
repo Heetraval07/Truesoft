@@ -23,8 +23,8 @@ const Index = () => {
       />
 
       {/* Why Choose Truesoft - Enterprise SaaS section */}
-      <section className="bg-gray-100 py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-gray-100 py-12 sm:py-16 lg:py-20">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className="
             relative
@@ -33,8 +33,11 @@ const Index = () => {
             via-[#123158]/5
             to-white
             rounded-3xl
-            px-10
-            py-16
+            px-6
+            sm:px-8
+            lg:px-10
+            py-12
+            sm:py-16
             shadow-[0_20px_60px_rgba(0,0,0,0.08)]
             overflow-hidden
             "
@@ -52,8 +55,8 @@ const Index = () => {
               "
             />
             <ScrollReveal>
-              <div className="mb-12 text-center relative">
-                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              <div className="mb-8 sm:mb-12 text-center relative">
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
                   Why Choose Truesoft?
                 </h2>
                 <p className="max-w-3xl mx-auto text-lg text-muted-foreground">
@@ -251,8 +254,8 @@ const Index = () => {
       <FeatureShowcase />
 
       {/* Comprehensive Business Solutions - Claudion-style enterprise container */}
-      <section className="bg-gray-100 py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-gray-100 py-12 sm:py-16 lg:py-20">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className="
             bg-gradient-to-br
@@ -260,8 +263,11 @@ const Index = () => {
             via-[#1a4b7a]
             to-[#123158]
             rounded-3xl
-            px-12
-            py-16
+            px-6
+            sm:px-10
+            lg:px-12
+            py-12
+            sm:py-16
             shadow-[0_20px_60px_rgba(0,0,0,0.2)]
             relative
             overflow-hidden
@@ -283,10 +289,13 @@ const Index = () => {
             <h2
               className="
               text-3xl
+              sm:text-4xl
+              lg:text-5xl
               font-bold
               text-white
               text-center
-              mb-12
+              mb-8
+              sm:mb-12
               relative
               "
             >
@@ -378,8 +387,8 @@ const Index = () => {
       </section>
 
       {/* Our Managed Services - Premium feature highlight (Claudion-style) */}
-      <section className="py-20 md:py-24 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 lg:py-20 md:py-24 bg-gray-100">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="managed-services-card">
             {/* Text column - max-width 55%, z-index 3 */}
             <div className="relative z-[3] w-full max-w-full lg:max-w-[55%] text-center lg:text-left">
