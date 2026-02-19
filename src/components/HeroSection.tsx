@@ -36,8 +36,8 @@ const HeroSection = ({
     return (
       <section className="relative overflow-hidden bg-gray-100 pt-2 pb-16">
         <div
-          className="mx-auto"
-          style={{ maxWidth: 1280, margin: "20px auto 0", padding: "40px 60px" }}
+          className="mx-auto px-4 sm:px-6 md:px-10 lg:px-[60px]"
+          style={{ maxWidth: 1280, marginTop: 20 }}
         >
           <div
             className="hero-section relative overflow-hidden"
@@ -70,9 +70,8 @@ const HeroSection = ({
             <div className="hero-container relative z-10">
               <div className="hero-content">
                 <h1
-                  className="font-heading text-white"
+                  className="font-heading text-white text-3xl sm:text-4xl md:text-5xl lg:text-[64px]"
                   style={{
-                    fontSize: 64,
                     lineHeight: 1.1,
                     fontWeight: 700,
                     maxWidth: 620,

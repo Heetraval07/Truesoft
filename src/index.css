@@ -412,9 +412,21 @@
 }
 
 .hero-premium-title {
-  font-size: 52px;
+  font-size: 28px;
   line-height: 1.1;
   font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .hero-premium-title {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-premium-title {
+    font-size: 52px;
+  }
 }
 
 .hero-premium-subtitle {
@@ -429,7 +441,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px;
+  padding: 40px 20px;
+}
+
+@media (min-width: 640px) {
+  .hero-container {
+    padding: 50px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-container {
+    padding: 80px;
+  }
 }
 
 @media (max-width: 900px) {
