@@ -307,7 +307,7 @@ const Index = () => {
               >
                 <div className="mb-6 flex justify-center">
                   <img
-                    src="/illustrations/billing-invoicing.webp"
+                    src={process.env.PUBLIC_URL + "/illustrations/billing-invoicing.webp"}
                     alt="Billing & Invoicing"
                     className="block w-full max-w-[520px] h-auto object-contain rounded-2xl transition-all duration-300 ease hover:-translate-y-[5px]"
                   />
@@ -336,7 +336,7 @@ const Index = () => {
               >
                 <div className="mb-6 flex justify-center">
                   <img
-                    src="/illustrations/seamless-integration.webp"
+                    src={process.env.PUBLIC_URL + "/illustrations/seamless-integration.webp"}
                     alt="Seamless Integration"
                     className="block w-full max-w-[520px] h-auto object-contain rounded-2xl transition-all duration-300 ease hover:-translate-y-[5px]"
                   />

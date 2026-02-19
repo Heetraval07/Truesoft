@@ -1,6 +1,7 @@
-import supportTeamImg from "@/assets/illustrations/support-team.svg";
+import { publicUrl } from "@/lib/publicUrl";
 
 export function FeatureShowcase() {
+  const supportTeamImg = publicUrl("illustrations/support-team.svg");
   return (
     <section className="bg-gray-100 py-20">
       <div className="max-w-7xl mx-auto px-6">
