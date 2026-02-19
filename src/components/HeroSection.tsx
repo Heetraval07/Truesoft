@@ -34,8 +34,11 @@ const HeroSection = ({
   if (claudion) {
     const heroImg = image || publicUrl("illustrations/Frappe-removebg-preview.png");
     return (
-      <section className="relative overflow-hidden bg-gray-100 px-6 sm:px-8 lg:px-16 py-16">
-        <div className="w-full max-w-7xl mx-auto mt-5 sm:mt-6 lg:mt-8">
+      <section className="relative overflow-hidden bg-gray-100 pt-2 pb-16">
+        <div
+          className="mx-auto px-4 sm:px-6 md:px-10 lg:px-[60px]"
+          style={{ maxWidth: 1280, marginTop: 20 }}
+        >
           <div
             className="hero-section relative overflow-hidden rounded-3xl"
             style={{
@@ -62,9 +65,16 @@ const HeroSection = ({
               <div className="absolute inset-0 bg-gradient-to-br from-[#123158]/40 via-transparent to-[#0f2a4a]/30" />
             </div>
 
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10 py-8 sm:py-12 lg:py-16 lg:px-20">
-              <div className="w-full lg:w-1/2 text-center lg:text-left hero-content">
-                <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight break-words max-w-xl mx-auto lg:mx-0">
+            <div className="hero-container relative z-10">
+              <div className="hero-content">
+                <h1
+                  className="font-heading text-white text-3xl sm:text-4xl md:text-5xl lg:text-[64px]"
+                  style={{
+                    lineHeight: 1.1,
+                    fontWeight: 700,
+                    maxWidth: 620,
+                  }}
+                >
                   {title}
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-white/70 max-w-xl leading-relaxed mt-4 mx-auto lg:mx-0">
