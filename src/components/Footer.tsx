@@ -26,7 +26,7 @@ const Footer = () => {
             <div className="flex items-center mb-4">
               <Link to="/" className="flex items-center">
                 <img
-                  src={publicUrl("illustrations/Footer-logo.jpeg")}
+                  src={import.meta.env.BASE_URL + "illustrations/Footer-logo.png"}
                   alt="Truesoft Logo"
                   width={140}
                   height={45}
