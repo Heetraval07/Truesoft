@@ -485,6 +485,36 @@
   display: block;
 }
 
+/* Hero image – no container; blends into hero background */
+.hero-visual .hero-image-blend {
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+}
+
+/* Smudge: gradient overlay so image fades into hero background */
+.hero-visual {
+  position: relative;
+}
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, #123158 0%, transparent 35%),
+    linear-gradient(to top, #123158 0%, transparent 25%);
+  pointer-events: none;
+}
+
+/* Hero image container - responsive (other pages) */
+.hero-image-wrapper img,
+.hero-image-container img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+}
+
 /* Stat Card Base Style */
 .stat-card {
   position: absolute;
@@ -739,28 +769,11 @@
 /* ERPNext - Platform Overview image */
 .platform-overview-image {
   width: 100%;
-  max-width: 520px;
+  max-width: 420px;
   height: auto;
-  border-radius: 12px;
-  margin-top: 20px;
-
-  /* light blended look */
-  opacity: 0.95;
-  mix-blend-mode: normal;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-
-  transition: transform 0.3s ease;
-}
-
-.platform-overview-image:hover {
-  transform: translateY(-4px);
-}
-
-@media (max-width: 768px) {
-  .platform-overview-image {
-    max-width: 100%;
-  }
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 /* ERP Dashboard Preview - Claudion-style dark carousel */

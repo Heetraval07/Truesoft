@@ -24,7 +24,6 @@ import {
 const ERPNext = () => {
   useDocumentTitle("ERPNext");
   const heroImg = publicUrl("illustrations/erp-hero.png");
-  const platformOverviewImg = publicUrl("illustrations/platform-overview.png");
   const coreCapabilitiesImg = publicUrl("illustrations/core-capibilities-transparent.png");
 
   const modules = [
@@ -82,9 +81,9 @@ const ERPNext = () => {
               </ul>
               <div className="mt-6 flex justify-center items-center">
                 <img
-                  src={platformOverviewImg}
+                  src={process.env.PUBLIC_URL + "/illustrations/Platform-Overview-try.png"}
                   alt="ERPNext Platform Overview"
-                  className="platform-overview-image max-h-[260px] object-contain transition-transform duration-300 hover:scale-105"
+                  className="platform-overview-image floating-animation"
                 />
               </div>
             </div>

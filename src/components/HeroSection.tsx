@@ -103,13 +103,11 @@ const HeroSection = ({
               </div>
 
               <div className="hero-visual">
-                <div className="hero-image-wrapper">
-                  <img
-                    src={heroImg}
-                    className="hero-image"
-                    alt={imageAlt}
-                  />
-                </div>
+                <img
+                  src={heroImg}
+                  className="hero-image hero-image-blend"
+                  alt={imageAlt}
+                />
               </div>
             </div>
           </div>

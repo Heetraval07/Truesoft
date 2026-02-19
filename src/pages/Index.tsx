@@ -10,11 +10,14 @@ import { publicUrl } from "@/lib/publicUrl";
 const Index = () => {
   useDocumentTitle();
   const managedServicesImg = publicUrl("illustrations/managed-services-phone.png");
+  const homeHeroImg = publicUrl("illustrations/home-hero.png");
   return (
     <Layout>
       {/* Hero */}
       <HeroSection
         claudion
+        image={homeHeroImg}
+        imageAlt="Enterprise ERP Software"
         ctaText="Explore Our Solutions"
         ctaLink="/contact"
       />
