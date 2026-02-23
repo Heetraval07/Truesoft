@@ -74,7 +74,7 @@ const DashboardPreview = () => {
         {/* Carousel */}
         <div className="overflow-hidden relative px-4 sm:px-6 lg:px-0">
           <div
-            className="flex gap-6 sm:gap-8 transition-transform duration-[600ms] ease-out"
+            className="flex gap-6 sm:gap-8 transition-transform duration-700 ease-out"
             style={{
               transform: `translateX(calc(-${currentIndex} * (75% + 32px)))`,
             }}
@@ -88,7 +88,7 @@ const DashboardPreview = () => {
                   <img
                     src={slide.src}
                     alt={slide.alt}
-                    className="w-full max-w-xs sm:max-w-md lg:max-w-lg mx-auto h-auto rounded-xl object-cover transition-transform duration-[400ms] ease-out group-hover:scale-105"
+                    className="w-full max-w-xs sm:max-w-md lg:max-w-lg mx-auto h-auto rounded-xl object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                   />
                 </div>
               </div>
