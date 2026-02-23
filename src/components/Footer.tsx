@@ -73,7 +73,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-hero-foreground/70 text-sm">
                 <Mail size={16} className="text-accent flex-shrink-0" />
-                info@truesoft.com
+                info@truesoft.ae
               </li>
               <li className="flex items-center gap-2 text-hero-foreground/70 text-sm">
                 <Phone size={16} className="text-accent flex-shrink-0" />

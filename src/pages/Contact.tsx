@@ -37,7 +37,7 @@ const Contact = () => {
               </p>
               <div className="space-y-6">
                 {[
-                  { icon: <Mail size={20} />, label: "Email", value: "info@truesoft.com" },
+                  { icon: <Mail size={20} />, label: "Email", value: "info@truesoft.ae" },
                   { icon: <Phone size={20} />, label: "Phone", value: "054 765 8506" },
                   { icon: <MapPin size={20} />, label: "Address", value: "Office 201-09, Al Nisf Building, Dubai Airport Road, Dubai, UAE" },
                   { icon: <Clock size={20} />, label: "Working Hours", value: "Mon - Sat: 9:00 AM - 6:00 PM" },
